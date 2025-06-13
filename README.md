@@ -1,6 +1,3 @@
-
-
-```markdown
 # DriveAway Car Rentals
 
 A modern car rental web application built with React, TypeScript, and Tailwind CSS. Browse luxury cars, view detailed information, and manage rentals with a clean, responsive interface.
@@ -54,19 +51,6 @@ VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
 ```bash
 npm run dev
 ```
-
-The application will be available at `http://localhost:5173`
-
-## 📝 Available Scripts
-
-| Script | Command | Description |
-|--------|---------|-------------|
-| `dev` | `vite` | Start development server |
-| `build` | `vite build` | Build for production |
-| `build:dev` | `vite build --mode development` | Build for development |
-| `lint` | `eslint .` | Run ESLint |
-| `preview` | `vite preview` | Preview production build |
-
 ## 🏗️ Project Structure
 
 ```
