@@ -66,20 +66,6 @@ The application will be available at `http://localhost:5173`
 
 ## 🏗 Project Structure
 
-
-src/
-├── components/
-│   ├── layout/
-│   │   └── Header.tsx          # Navigation and authentication
-│   └── ui/                     # Reusable UI components
-├── pages/
-│   ├── Cars.tsx               # Vehicle listing with filters
-│   ├── CarDetails.tsx         # Individual car details and booking
-│   └── About.tsx              # Company information
-├── App.tsx                    # Main application component
-└── main.tsx                   # Application entry point
-
-
 ## 🔧 Configuration
 
 ### Authentication Setup
