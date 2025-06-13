@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Star, Users, Car, Shield, Clock, Award, ArrowRight } from "lucide-react";
+import { Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { stats } from "@/static/stats";
 import { values } from "@/static/values";
@@ -70,7 +70,9 @@ const About = () => {
               </Link>
             </div>
             <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Company Story Image</span>
+              <span className="text-gray-500">
+                <img src= "/" alt="company image"/>
+              </span>
             </div>
           </div>
         </div>
@@ -146,7 +148,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );

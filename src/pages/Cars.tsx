@@ -9,80 +9,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Star, Search, Filter } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { cars } from "@/static/cars";
 
 const Cars = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [priceFilter, setPriceFilter] = useState("all");
-
-  const cars = [
-    {
-      id: 1,
-      name: "BMW 3 Series",
-      category: "luxury",
-      price: 89,
-      image: "/placeholder.svg",
-      rating: 4.8,
-      features: ["Automatic", "5 Seats", "Premium Audio", "Navigation"],
-      transmission: "Automatic",
-      fuel: "Gasoline",
-    },
-    {
-      id: 2,
-      name: "Toyota Camry",
-      category: "comfort",
-      price: 59,
-      image: "/placeholder.svg",
-      rating: 4.6,
-      features: ["Automatic", "5 Seats", "Fuel Efficient", "Bluetooth"],
-      transmission: "Automatic",
-      fuel: "Gasoline",
-    },
-    {
-      id: 3,
-      name: "Tesla Model S",
-      category: "electric",
-      price: 129,
-      image: "/placeholder.svg",
-      rating: 4.9,
-      features: ["Electric", "5 Seats", "Autopilot", "Premium Interior"],
-      transmission: "Automatic",
-      fuel: "Electric",
-    },
-    {
-      id: 4,
-      name: "Honda Civic",
-      category: "economy",
-      price: 39,
-      image: "/placeholder.svg",
-      rating: 4.4,
-      features: ["Manual", "5 Seats", "Economic", "Reliable"],
-      transmission: "Manual",
-      fuel: "Gasoline",
-    },
-    {
-      id: 5,
-      name: "Mercedes C-Class",
-      category: "luxury",
-      price: 99,
-      image: "/placeholder.svg",
-      rating: 4.7,
-      features: ["Automatic", "5 Seats", "Luxury", "Premium Sound"],
-      transmission: "Automatic",
-      fuel: "Gasoline",
-    },
-    {
-      id: 6,
-      name: "Ford Mustang",
-      category: "sports",
-      price: 119,
-      image: "/placeholder.svg",
-      rating: 4.8,
-      features: ["Manual", "4 Seats", "Sport Mode", "V8 Engine"],
-      transmission: "Manual",
-      fuel: "Gasoline",
-    },
-  ];
 
   const filteredCars = cars.filter((car) => {
     const matchesSearch = car.name.toLowerCase().includes(searchTerm.toLowerCase());

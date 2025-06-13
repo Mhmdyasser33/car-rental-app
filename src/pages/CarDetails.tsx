@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ArrowLeft, Star, Users, Fuel, Settings, Calendar, CheckCircle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Helmet } from "react-helmet-async";
+import { car } from "@/static/car";
 
 const CarDetails = () => {
   const [bookingData, setBookingData] = useState({
@@ -18,28 +19,6 @@ const CarDetails = () => {
     pickupLocation: "",
     driverAge: "",
   });
-
-  const car = {
-    id: 1,
-    name: "BMW 3 Series",
-    category: "Luxury",
-    price: 89,
-    image: "/placeholder.svg",
-    rating: 4.8,
-    reviews: 127,
-    features: ["Automatic Transmission", "5 Seats", "Premium Audio", "Navigation", "Leather Seats", "Climate Control"],
-    specifications: {
-      engine: "2.0L Turbo",
-      transmission: "8-Speed Automatic",
-      fuel: "Gasoline",
-      seats: 5,
-      luggage: "Large",
-      fuelConsumption: "7.5L/100km",
-    },
-    description: "Experience luxury and performance with the BMW 3 Series. This premium sedan combines elegant design with cutting-edge technology to deliver an exceptional driving experience.",
-    images: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-  };
-
   const handleBooking = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -249,7 +228,6 @@ const CarDetails = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
     </>
