@@ -34,10 +34,9 @@ A modern car rental web application built with React, TypeScript, and Tailwind C
 
 ### Installation
 
-1. Clone the repository:
+## Clone the repository:
 ```bash
 git clone https://github.com/Mhmdyasser33/car-rental-app.git
-cd car-rental-app
 ```
 
 2. Install dependencies:
