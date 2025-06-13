@@ -25,6 +25,7 @@ const App = () => (
         content="car rental, luxury cars, affordable rentals"
       />
     </Helmet>
+    
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/cars/:id" element={<CarDetails />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
+            
           </Routes>
         </BrowserRouter>
       </TooltipProvider>
