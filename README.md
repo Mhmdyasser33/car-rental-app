@@ -1,15 +1,16 @@
-A modern, full-featured car rental web application built with React, TypeScript, and Tailwind CSS. Browse available vehicles, view detailed information, and book rentals with an intuitive user interface.
+# DriveAway Car Rentals
+
+A modern car rental web application built with React, TypeScript, and Tailwind CSS. Browse luxury cars, view detailed information, and manage rentals with a clean, responsive interface.
 
 ## 🚗 Features
 
-- **Vehicle Browsing**: Search and filter cars by category and price range
-- **Detailed Car Information**: View specifications, features, and pricing
-- **User Authentication**: Secure sign-in/sign-up with Clerk integration
-- **Booking System**: Complete rental booking with date and location selection
+- **Car Browsing**: Search and filter through available rental cars
+- **User Authentication**: Secure login/logout with Clerk authentication
 - **Responsive Design**: Mobile-first design that works on all devices
-- **Modern UI**: Built with Shadcn/UI components and Radix UI primitives
+- **Car Details**: Detailed car information with features and pricing
+- **Modern UI**: Built with Shadcn/UI components and Tailwind CSS
 
-## 🛠 Technology Stack
+## 🛠️ Tech Stack
 
 - **Frontend**: React 18.3.1 with TypeScript 5.5.3
 - **Build Tool**: Vite 5.4.1
@@ -18,8 +19,8 @@ A modern, full-featured car rental web application built with React, TypeScript,
 - **UI Components**: Radix UI + Shadcn/UI
 - **Styling**: Tailwind CSS 3.4.11
 - **State Management**: TanStack Query 5.56.2
-- **Form Handling**: React Hook Form 7.53.0 with Zod validation
-- **Icons**: Lucide React
+- **Form Handling**: React Hook Form 7.53.0
+- **Validation**: Zod 3.23.8
 
 ## 🚀 Getting Started
 
@@ -30,126 +31,83 @@ A modern, full-featured car rental web application built with React, TypeScript,
 
 ### Installation
 
-1. Clone the repository:
-bash
+## Clone the repository:
+```bash
 git clone https://github.com/Mhmdyasser33/car-rental-app.git
-cd car-rental-app
-
+```
 
 2. Install dependencies:
-bash
+```bash
 npm install
-
+```
 
 3. Set up environment variables:
 Create a `.env` file in the root directory and add:
-env
+```env
 VITE_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
-
+```
 
 4. Start the development server:
-bash
+```bash
 npm run dev
+```
+## 🏗️ Project Structure
 
-
-The application will be available at `http://localhost:5173`
-
-## 📝 Available Scripts
-
-| Script | Command | Description |
-|--------|---------|-------------|
-| `dev` | `npm run dev` | Start development server |
-| `build` | `npm run build` | Build for production |
-| `build:dev` | `npm run build:dev` | Build in development mode |
-| `preview` | `npm run preview` | Preview production build |
-| `lint` | `npm run lint` | Run ESLint |
-
-## 🏗 Project Structure
-
-
+```
 src/
 ├── components/
-│   ├── layout/
-│   │   └── Header.tsx          # Navigation and authentication
-│   └── ui/                     # Reusable UI components
-├── pages/
-│   ├── Cars.tsx               # Vehicle listing with filters
-│   ├── CarDetails.tsx         # Individual car details and booking
-│   └── About.tsx              # Company information
-├── App.tsx                    # Main application component
-└── main.tsx                   # Application entry point
-
-
-## 🔧 Configuration
-
-### Authentication Setup
-
-The application uses Clerk for authentication. To set up:
-
-1. Create a Clerk account at [clerk.com](https://clerk.com)
-2. Create a new application
-3. Copy your publishable key to the `.env` file
-4. The authentication is configured in the main application entry point
-
-### Environment Variables
-
-- `VITE_CLERK_PUBLISHABLE_KEY`: Your Clerk publishable key for authentication
-
-## 🎨 UI Components
-
-The application uses a modern component system built on:
-- **Radix UI**: Accessible component primitives
-- **Shadcn/UI**: Pre-built component library
-- **Tailwind CSS**: Utility-first styling
-- **Responsive Design**: Mobile-first approach with breakpoint-based layouts
-
-## 📱 Pages and Features
-
-### Home Page (`/`)
-- Landing page with featured cars and company overview
-
-### Cars Page (`/cars`)
-- Browse all available vehicles
-- Search by car name
-- Filter by category (SUV, Sedan, Hatchback, etc.)
-- Filter by price range
-- Responsive grid layout
-
-### Car Details Page (`/cars/:id`)
-- Detailed vehicle information
-- Image gallery
-- Specifications and features
-- Booking form with date selection
-- Price calculation
-
-### About Page (`/about`)
-- Company information
-- Team members
-- Company values and statistics
+│   ├── layout/          # Layout components (Header, Footer)
+│   └── ui/              # Reusable UI components
+├── pages/               # Page components
+│   ├── Index.tsx        # Homepage
+│   ├── Cars.tsx         # Car browsing page
+│   ├── CarDetails.tsx   # Individual car details
+│   ├── About.tsx        # About page
+│   └── NotFound.tsx     # 404 page
+├── static/              # Static data files
+├── data.ts              # Featured cars data
+├── App.tsx              # Main app component
+└── main.tsx             # Application entry point
+```
 
 ## 🔐 Authentication
 
-User authentication is handled through Clerk with the following features:
-- Sign in/Sign up functionality
-- User profile management
-- Protected routes and components
-- Responsive authentication UI
+The application uses Clerk for authentication. Users can:
+- Sign in/Sign up with various providers
+- Access protected routes
+- Manage their profile
+
+Authentication is configured at the root level and integrated throughout the application.
+
+## 🎨 UI Components
+
+Built with a comprehensive UI system using:
+- **Radix UI**: Accessible component primitives
+- **Shadcn/UI**: Pre-built component library
+- **Tailwind CSS**: Utility-first styling
+- **Lucide React**: Modern icon library
+
+## 📱 Pages
+
+- **Homepage** (`/`): Featured cars and hero section
+- **Cars** (`/cars`): Browse all available cars with search and filters
+- **Car Details** (`/cars/:id`): Detailed view of individual cars
+- **About** (`/about`): Information about the service
+- **404** (`*`): Not found page
+
+## 🔍 Car Browsing Features
+
+- **Search**: Find cars by name
+- **Category Filter**: Filter by Economy, Comfort, Luxury, Sports, Electric
+- **Price Filter**: Filter by price ranges (Under $60, $60-$100, Over $100)
+- **Responsive Grid**: Adaptive layout for different screen sizes
 
 ## 🚀 Deployment
 
-### Production Build
-
-bash
+1. Build the project:
+```bash
 npm run build
-
-
-The build artifacts will be stored in the `dist/` directory.
-
-### Preview Production Build
-
-bash
-npm run preview
-
+```
 
 ## 🤝 Contributing
 
@@ -160,4 +118,5 @@ npm run preview
 5. Open a Pull Request
 
 ## 📄 License
-This project is licensed under the MIT License.
+
+This project is open source and available under the [MIT License](LICENSE).
