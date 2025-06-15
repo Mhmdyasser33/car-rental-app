@@ -109,6 +109,18 @@ Built with a comprehensive UI system using:
 npm run build
 ```
 
+## 🐳 Docker
+
+1. Build the Docker image:
+```bash
+docker build -t car-rental-app .
+```
+2. Run the container:
+```bash
+docker run --rm -p 4173:4173 car-rental-app
+```
+Then open `http://localhost:4173` in your browser.
+
 ## 🤝 Contributing
 
 1. Fork the repository
